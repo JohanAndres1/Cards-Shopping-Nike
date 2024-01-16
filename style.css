@@ -1,0 +1,122 @@
+body {
+	background: #000000;
+}
+.contenedor {
+	display: flex;
+	justify-content: space-evenly;
+}
+.carta {
+	background-color: #fff;
+	border-radius: 24px;
+	padding: 16px;
+	overflow: hidden;
+	transform: translate(0);
+	margin: 12px;
+	transition: 0.25s;
+}
+.carta:hover {
+	transform: scale(1.05);
+}
+.carta::before {
+	content: '';
+	position: absolute;
+	top: -64px;
+	left: -64px;
+	width: 130%;
+	height: 70%;
+	transform: rotate(-12deg);
+	z-index: -1;
+}
+.carta.carta-amarilla::before {
+	background: linear-gradient(170deg, #d97904, #f2d705);
+}
+.carta.carta-azul::before {
+	background: linear-gradient(170deg, #235b8c, #03a696);
+}
+.carta.carta-roja::before {
+	background: linear-gradient(170deg, #d9042b, #ff4270);
+}
+.carta .logo {
+	height: 35px;
+}
+.carta h2 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 80px;
+	text-transform: uppercase;
+	line-height: 64px;
+	color: #ffffff;
+	margin: 0%;
+}
+.carta .producto {
+	width: 300px;
+	object-fit: contain;
+	transform: rotate(-35deg);
+	margin-top: -80px;
+	margin-left: -32px;
+	margin-right: 24px;
+}
+.carta .precio {
+	text-align: right;
+	margin-top: -24px;
+}
+.carta .precio :is(h6, h4) {
+	font-family: 'Segoe UI', Tahoma;
+	color: #fff;
+	margin: 0px;
+}
+.carta .precio h6 {
+	color: #a3a3a3;
+	font-size: 12px;
+	text-decoration: line-through;
+}
+.carta .precio h4 {
+	font-size: 24px;
+	margin-top: -4px;
+}
+.carta.carta-amarilla .precio h4 {
+	background: linear-gradient(170deg, #d97904, #f2d705);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.carta.carta-azul .precio h4 {
+	background: linear-gradient(170deg, #235b8c, #03a696);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.carta.carta-roja .precio h4 {
+	background: linear-gradient(170deg, #d9042b, #ff4270);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.carta .boton-derecho {
+	text-align: right;
+	margin-top: 40px;
+}
+.carta button {
+	font-family: 'Franklin Gothic Medium', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #ffffff;
+	padding: 8px 32px;
+	border: none;
+	border-radius: 48px;
+	cursor: pointer;
+}
+.carta.carta-amarilla button {
+	background: linear-gradient(170deg, #d9790470, #f2d70570);
+}
+.carta.carta-azul button {
+	background: linear-gradient(170deg, #235b8c70, #03a69670);
+}
+.carta.carta-roja button {
+	background: linear-gradient(170deg, #d9042b70, #ff427070);
+}
+.carta.carta-amarilla button:hover {
+	background: linear-gradient(170deg, #d97904, #f2d705);
+}
+.carta.carta-azul button:hover {
+	background: linear-gradient(170deg, #235b8c, #03a696);
+}
+.carta.carta-roja button:hover {
+	background: linear-gradient(170deg, #d9042b, #ff4270);
+}
